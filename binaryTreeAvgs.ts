@@ -11,6 +11,8 @@
   output -> [4, 8, 6]
 */
 
+import Queue from "./data-structures/queue.ts";
+
 class BinaryTreeNode {
   val: number;
   left: BinaryTreeNode | null = null;
@@ -29,6 +31,9 @@ function collectAverages(rootNode: BinaryTreeNode | null): number[] {
   let currentLvl = 0;
   let currentLvlCount = 1;
   let currentLvlSum = rootNode.val;
+  // Array.unshift is a O(N) operation.
+  // Would use an actual Queue data structure to
+  // achieve O(1) time complexity.
   const queue: [BinaryTreeNode, number][] = [[rootNode, 0]];
 
   const storeAvg = () => {
