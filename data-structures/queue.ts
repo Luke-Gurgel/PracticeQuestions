@@ -1,4 +1,4 @@
-import LinkedList, { LinkedListNode } from "./singly_linked_list.ts";
+import LinkedList, { LinkedListNode } from "./singlyLinkedList.ts";
 
 export default class Queue {
   private linkedList: LinkedList;
